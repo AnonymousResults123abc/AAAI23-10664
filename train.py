@@ -80,7 +80,7 @@ def main():
         num_workers=args.workers, pin_memory=True)
 
     # train the model
-    model_student.module.load_state_dict(torch.load('rebnn_66_88_new.pth', map_location='cpu'))
+    model_student.module.load_state_dict(torch.load('rebnn_66_9.pth', map_location='cpu'))
     valid_obj, valid_top1_acc, valid_top5_acc = validate(0, val_loader, model_student, criterion, args)
 
 
